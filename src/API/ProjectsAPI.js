@@ -414,7 +414,7 @@ const projects = [
     technologies: ["Flutter", "Dart"],
     code: "Público",
     description:"Desarrollo de una aplicación de lista de palabras con Flutter y Dart. La aplicación permite a los usuarios elegir una palabra de una lista y guardarla en una lista de favoritos",
-    bannerImage: "/flutter.PNG",
+    bannerImage: "/flutter.png",
     githubLink:"https://github.com/T0ny-dev/List-App-Flutter",
     category: "Desarrollo web",
     videoUrl: "https://www.youtube.com/watch?v=SBq2OkgHkwg?modestbranding=1&rel=0",
