@@ -1,6 +1,4 @@
-import { a } from 'framer-motion/client';
-import React from 'react';
-import { BsJustify } from 'react-icons/bs';
+
 
 const LinkBio = () => {
   return (

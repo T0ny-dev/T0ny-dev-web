@@ -1,6 +1,6 @@
 import Home from "./Views/Home";
 import ViewProjects from "./Views/ViewProjects";
-import LinkBio from "./components/linkBio";
+import LinkBio from "./components/LinkBio";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 
