@@ -168,7 +168,7 @@ const Header = () => {
       <Nav $isOpen={isOpen}>
         <LinksContainer>
           <NavLink href="/">Inicio</NavLink>
-          <NavLink href="/link-bio/" target="_blank">Link Bio</NavLink>
+          <NavLink href="/link-bio" target="_blank">Link Bio</NavLink>
           <NavLink href="https://www.linkedin.com/in/antoniora-me/" target="_blank">LinkedIn</NavLink>
           <NavLink href="https://docs.google.com/document/d/12jUioaKHtKximj08X61LphEYnJ1pn3jD57jNKsnB9QI/edit?tab=t.0" target="_blank">Curriculum Vitae</NavLink>
           <a href="https://github.com/T0ny-dev" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
