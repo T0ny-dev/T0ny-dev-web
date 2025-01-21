@@ -2,14 +2,28 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import Header from "../components/Header";
 import projects from "../API/ProjectsAPI";
 import { FaCode } from "react-icons/fa";
+
+// Colores
+const colors = {
+  background: "#16161a",
+  card: "#262642",
+  highlight: "#7f5af0",
+  text: "#fffffe",
+  buttonHover: "#a78bfa",
+  hoverScale: 1.05,
+};
 
 // Styled Components
 const Container = styled.div`
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: ${colors.background};
+  color: ${colors.text};
+  min-height: 100vh;
 `;
 
 const Banner = styled.img`
@@ -27,10 +41,24 @@ const ContentContainer = styled.div`
   margin: 20px;
 `;
 
-const Column = styled.div`
+const StickyColumn = styled(motion.div)`
   flex: 1 1 calc(50% - 10px);
   padding: 20px;
-  background: #f9f9f9;
+  background: ${colors.card};
+  border-radius: 10px;
+  position: sticky;
+  top: 80px;
+
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
+    position: static;
+  }
+`;
+
+const Column = styled(motion.div)`
+  flex: 1 1 calc(50% - 10px);
+  padding: 20px;
+  background: ${colors.card};
   border-radius: 10px;
 
   @media (max-width: 768px) {
@@ -59,9 +87,31 @@ const DeveloperInfo = styled.div`
   }
 
   p {
-    color: #555;
+    color: ${colors.text};
     font-size: 14px;
     margin: 5px 0;
+  }
+`;
+
+const ButtonsGithub = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 3vh;
+
+  a {
+    text-decoration: none;
+    color: ${colors.text};
+    background-color: #595aff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      background-color:#7b7bfd;
+      transform: scale(${colors.hoverScale});
+    }
   }
 `;
 
@@ -72,14 +122,16 @@ const Buttons = styled.div`
 
   a {
     text-decoration: none;
-    color: white;
-    background: #007bff;
+    color: ${colors.text};
+    background: ${colors.highlight};
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
+    transition: transform 0.3s ease;
 
     &:hover {
-      background: #0056b3;
+      background: ${colors.buttonHover};
+      transform: scale(${colors.hoverScale});
     }
   }
 `;
@@ -89,7 +141,9 @@ const SpanList = styled.div`
 
   span {
     display: inline-block;
-    background: #f0f0f0;
+    background: ${colors.card};
+    border: 2px solid #7f5af0;
+    border-radius: 100px;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
@@ -97,7 +151,7 @@ const SpanList = styled.div`
   }
 `;
 
-const ViewsContainer = styled.div`
+const ViewsContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -108,9 +162,10 @@ const ViewsContainer = styled.div`
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(${colors.hoverScale});
     }
   }
 `;
@@ -123,25 +178,26 @@ const ProjectDetails = () => {
     return <h2>Proyecto no encontrado</h2>;
   }
 
+  const videoUrl = `${project.videoUrl}`; // Evitar sugerencias externas
+
   return (
     <Container>
       <Header />
       <Banner src={project.bannerImage} alt={project.title} />
       <ContentContainer>
-        {/* Columna izquierda */}
-        <Column>
+        {/* Columna izquierda fija */}
+        <StickyColumn
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <DeveloperInfo>
             <h1>Antonio Rodriguez</h1>
             <p>@T0ny-dev</p>
           </DeveloperInfo>
-          <ReactPlayer
-            url={project.videoUrl}
-            controls
-            width="100%"
-            height="300px"
-          />
+          <ReactPlayer url={videoUrl} controls width="100%" height="300px" />
           <Title>
-            <FaCode /> Código {project.code}
+            <FaCode /> {project.code}
           </Title>
           <Buttons>
             {project.demoLink && (
@@ -149,15 +205,21 @@ const ProjectDetails = () => {
                 Ver demo
               </a>
             )}
+          </Buttons>
+          <ButtonsGithub>
             {project.githubLink && (
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                 Ver en GitHub
               </a>
             )}
-          </Buttons>
-        </Column>
+          </ButtonsGithub>
+        </StickyColumn>
         {/* Columna derecha */}
-        <Column>
+        <Column
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <Title>{project.title}</Title>
           <p>{project.description}</p>
           <SpanList>
@@ -169,10 +231,11 @@ const ProjectDetails = () => {
           <ViewsContainer>
             {project.views && project.views.length > 0 ? (
               project.views.map((view, index) => (
-                <img
+                <motion.img
                   key={index}
                   src={view}
                   alt={`Vista del proyecto ${index + 1}`}
+                  whileHover={{ scale: colors.hoverScale }}
                 />
               ))
             ) : (

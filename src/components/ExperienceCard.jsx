@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 
 const Container = styled.div`
   display: flex;
@@ -7,21 +9,38 @@ const Container = styled.div`
   gap: 20px;
   width: 100vw;
   align-items: start;
-  padding: 10vh 4vw;
+  padding: 10vh 5vw 10vh 4vw;
+  background-color: #16161a;
+  color: white;
 
   @media (max-width: 768px) {
     padding: 5vh 5vw;
   }
+
+  h1 {
+    color: #ffffff;
+    font-family: "Young Serif", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  border: 1px solid #ccc;
+  background-color: transparent;
+  border: 2px solid #262642;
   border-radius: 8px;
   padding: 16px;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -43,6 +62,7 @@ const ImageContainer = styled.div`
   span {
     margin-top: 8px;
     font-style: italic;
+    color: #ffffff;
   }
 
   @media (max-width: 768px) {
@@ -55,10 +75,15 @@ const Content = styled.div`
 
   h3 {
     margin: 0;
+    color: #ffffff;
+    font-family: "Young Serif", serif;
+    font-weight: 500;
+    font-size: 1.5rem;
   }
 
   p {
     margin: 8px 0;
+    color: white;
   }
 `;
 
@@ -69,10 +94,12 @@ const TagsContainer = styled.div`
   margin-top: 2vh;
 
   span {
-    background-color: #f0f0f0;
+    background-color: #7f5af0;
+    color: white;
     padding: 4px 8px;
+    font-weight: 500;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 18px;
   }
 `;
 
@@ -91,7 +118,13 @@ const ExperienceCard = () => {
     <Container>
       <h1>Experiencia</h1>
       {experiences.map((experience) => (
-        <Card key={experience.id}>
+        <Card
+          key={experience.id}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: experience.id * 0.2 }}
+          whileHover={{ scale: 1.05 }}
+        >
           <ImageContainer>
             <img src={experience.image} alt={experience.title} />
             <span>{experience.date}</span>

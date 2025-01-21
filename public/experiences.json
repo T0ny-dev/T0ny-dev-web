@@ -1,47 +1,55 @@
 [
   {
     "id": 1,
-    "image": "/icon-work.svg",
-    "date": "Abr 2024 - Presente",
-    "title": "Consultor De Desarrollo Web · Nexus Marketing, Reynosa, MX.",
-    "description": "Consultor de desarrollo web en Nexus Marketing Agencia, desarrollando soluciones tecnológicas y la gestión de proyectos estratégicos. Implementé un chatbot con inteligencia artificial para optimizar procesos de marketing y atención al cliente, colaborando con Capital Code (Colombia), Parabole y Nexus Marketing. Enfocado en la transformación digital y la innovación para impulsar resultados.",
-    "tags": ["React", "Supabase", "JavaScript", "wordpress", "Figma", "NextJS", "Astro"]
+    "image": "/rea.png",
+    "date": "Ene 2024 - Presente",
+    "title": "Desarrollador Front-end",
+    "description": "Desarrollo de aplicaciones frontend modernas, enfocándome en la creación de interfaces intuitivas y experiencias fluidas para usuarios web y móviles, utilizando tecnologías como Flutter y Dart.",
+    "tags": ["Flutter", "Dart","Firebase","Github"]
   },
   {
     "id": 2,
-    "image": "/people.svg",
+    "image": "/rea.png",
+    "date": "Abr 2024 - Ene 2025",
+    "title": "Consultor De Desarrollo Web · Nexus Marketing, Reynosa, MX.",
+    "description": "Consultor de desarrollo web en Nexus Marketing Agencia, desarrollando soluciones tecnológicas y la gestión de proyectos estratégicos. Implementé un chatbot con inteligencia artificial para optimizar procesos de marketing y atención al cliente, colaborando con Capital Code (Colombia), Parabole y Nexus Marketing. Enfocado en la transformación digital y la innovación para impulsar resultados.",
+    "tags": ["React", "Supabase", "JavaScript", "wordpress", "Figma", "NextJS", "Astro", "TypeScript", "Python"]
+  },
+  {
+    "id": 3,
+    "image": "/grap.png",
     "date": "Feb 2023 - Abr 2024",
     "title": "Coordinador de Centro Negocios · Universidad Tamauipeca, Reynosa, MX.",
     "description": "Coordiné actividades en centros de negocios en Reynosa, Matamoros y Rio Bravo, desarrollando aplicaciones clave como un MVP de encuestas y un Kiosco Digital con autenticación facial (React + Firebase). Implementé un laboratorio de análisis de datos para universidades utilizando Python y herramientas como Google Colab y Jupyter. También brindé soporte en relaciones internas y externas del centro empresarial.",
     "tags": ["Python", "Google Colab", "Google Looker Studio","React","Firebase","Moodle","LearnWorlds"]
   },
   {
-    "id": 3,
-    "image": "/icon-work.svg",
+    "id": 4,
+    "image": "/rea.png",
     "date": "Ago 2022 - Nov 2022",
     "title": "Candidato Full-Stack Developer · LarnU, Santiago de Chile",
     "description": "Participé en un Pasantia/bootcamp intensivo de stack PERN en LarnU Startup Acelerada por Google, desarrollando un portal colaborativo para desarrolladores. Completé un taller de Data Analysis con LarnU y Desafío Latam, y adquirí conocimientos en hacking ético.",
     "tags": ["React", "Node.js", "PostgreSQL", "Express","Testing", "CI/CD","HTML","SASS","JavaScript","Docker","Github", "Data Analysis"]
   },
   {
-    "id": 4,
-    "image": "/icon-work.svg",
+    "id": 5,
+    "image": "/rea.png",
     "date": "Ene 2020 - Jul 2022",
     "title": "Diseñador Web · Independiente, Reynosa, MX.",
     "description": "Implementé sistemas de gestión de aprendizaje con Moodle y Tutor LMS, capacitando a 15 abogados online. Fundador de Yo Amo La Oratoria A.C. y especializado en innovación de negocios en Crehana. Además, diseñé sitios web para empresas locales Bym Group, Creativa Studio y Márc Engineerning & Technology LLC y creé un curso de WordPress impartido en la UMAN.",
     "tags": ["HTML", "CSS", "JavaScript", "Wordpress", "PHP", "Plugins Personalizados", "Leardash", "Moodle", "Tutor LMS"]
   },
   {
-    "id": 5,
-    "image": "/people.svg",
+    "id": 6,
+    "image": "/grap.png",
     "date": "Jul 2018 - Jun 2022",
     "title": "Coordinador de Incuadora de Negocios | Instructor de Capacitación · CICADE, Reynosa, MX.",
     "description": "Coordinador de Incubadora de Negocios en CICADE Reynosa, con experiencia en representación empresarial, capacitación de 373 emprendedores y desarrollo de 60 proyectos liderados por mujeres. Impartí formación en administración, Lean Canvas y diseño de marca, fortaleciendo relaciones internas y externas para la incubadora.",
     "tags": ["HTML", "CSS", "JavaScript", "Wordpress", "PHP", "Plugins Personalizados", "Leardash", "Moodle", "Tutor LMS"]
   },
   {
-    "id": 6,
-    "image": "/people.svg",
+    "id": 7,
+    "image": "/ing.png",
     "date": "Dic. 2016 - Abr. 2018",
     "title": " Técnico de Lean Manufacturing · Corning RYI, Reynosa, MX.",
     "description": "Con experiencia en balanceo de líneas, resolución de problemas, VSM, 5S y SMED, contribuyendo al core team para análisis de causas raíces. Certificado como Green Belt (Corning CLC) y Six Sigma Black Belt (ALFRA Lean Advisors).",
