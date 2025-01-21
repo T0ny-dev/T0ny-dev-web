@@ -3,7 +3,7 @@
     "id": 1,
     "image": "/rea.png",
     "date": "Ene 2024 - Presente",
-    "title": "Desarrollador Front-end",
+    "title": "Desarrollador Front-end · CheersChat.com, Reynosa, MX. ",
     "description": "Desarrollo de aplicaciones frontend modernas, enfocándome en la creación de interfaces intuitivas y experiencias fluidas para usuarios web y móviles, utilizando tecnologías como Flutter y Dart.",
     "tags": ["Flutter", "Dart","Firebase","Github"]
   },
@@ -28,7 +28,7 @@
     "image": "/rea.png",
     "date": "Ago 2022 - Nov 2022",
     "title": "Candidato Full-Stack Developer · LarnU, Santiago de Chile",
-    "description": "Participé en un Pasantia/bootcamp intensivo de stack PERN en LarnU Startup Acelerada por Google, desarrollando un portal colaborativo para desarrolladores. Completé un taller de Data Analysis con LarnU y Desafío Latam, y adquirí conocimientos en hacking ético.",
+    "description": "Formé parte de la comunidad y bootcamp intensivo de stack PERN en LarnU, dentro de su Startup acelerada por Google. Durante este programa, desarrollé un portal colaborativo para desarrolladores en equipo. Además y completé un taller de análisis de datos impartido por LarnU y Desafío Latam con python, donde reforcé mis habilidades en Data Analysis.",
     "tags": ["React", "Node.js", "PostgreSQL", "Express","Testing", "CI/CD","HTML","SASS","JavaScript","Docker","Github", "Data Analysis"]
   },
   {
@@ -43,7 +43,7 @@
     "id": 6,
     "image": "/grap.png",
     "date": "Jul 2018 - Jun 2022",
-    "title": "Coordinador de Incuadora de Negocios | Instructor de Capacitación · CICADE, Reynosa, MX.",
+    "title": "Coordinador de Incubadora de Negocios | Instructor de Capacitación · CICADE, Reynosa, MX.",
     "description": "Coordinador de Incubadora de Negocios en CICADE Reynosa, con experiencia en representación empresarial, capacitación de 373 emprendedores y desarrollo de 60 proyectos liderados por mujeres. Impartí formación en administración, Lean Canvas y diseño de marca, fortaleciendo relaciones internas y externas para la incubadora.",
     "tags": ["HTML", "CSS", "JavaScript", "Wordpress", "PHP", "Plugins Personalizados", "Leardash", "Moodle", "Tutor LMS"]
   },
